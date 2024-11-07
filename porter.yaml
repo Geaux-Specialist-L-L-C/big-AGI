@@ -1,0 +1,19 @@
+version: v2
+name: geauxbig
+services:
+
+- name: web
+run: ""
+type: web
+instances: 1
+cpuCores: 0.16
+ramMegabytes: 300
+terminationGracePeriodSeconds: 30
+port: 3000
+sleep: false
+build:
+context: ./
+method: docker
+dockerfile: ./Dockerfile
+autoRollback:
+enabled: false
